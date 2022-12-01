@@ -1,0 +1,83 @@
+﻿@model EmployeeModel
+
+<form method="post" asp-action="Delete">
+    <input asp-for="Id" hidden />
+    <div class="border mt-4 p-3">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Employee Data</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="BasicPay"></label>
+            <input asp-for="BasicPay" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Start_Date"></label>
+            <input asp-for="Start_Date" disabled class="form-control" />
+            
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Gender"></label>
+            <input asp-for="Gender" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Phone"></label>
+            <input asp-for="Phone" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Department"></label>
+            <input asp-for="Department" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Deductions"></label>
+            <input asp-for="Deductions" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Taxable"></label>
+            <input asp-for="Taxable" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="IncomeTax"></label>
+            <input asp-for="IncomeTax" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="NetPay"></label>
+            <input asp-for="NetPay" disabled class="form-control" />
+            
+        </div>
+        <button type="submit" class="btn-danger btn" style="width:150px">Delete</button>
+        <a asp-controller="EmployeePayrollOperationController1" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to list
+        </a>
+    </div>
+</form>
+
+@*Client side validation
+    validations are in the script tag(refer shared->_ValidationScriptsPartial)
+*@
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+     }
+}
+

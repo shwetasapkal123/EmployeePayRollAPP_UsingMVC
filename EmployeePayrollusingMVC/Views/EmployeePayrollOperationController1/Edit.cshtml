@@ -1,0 +1,82 @@
+﻿@model EmployeeModel
+
+<form method="post" asp-action="Edit">
+    <div class="border mt-4 p-3">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Employee</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="BasicPay"></label>
+            <input asp-for="BasicPay" class="form-control" />
+            <span asp-validation-for="BasicPay" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Start_Date"></label>
+            <input asp-for="Start_Date" class="form-control" />
+            <span asp-validation-for="Start_Date" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Gender"></label>
+            <input asp-for="Gender" class="form-control" />
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Phone"></label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Department"></label>
+            <input asp-for="Department" class="form-control" />
+            <span asp-validation-for="Department" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Deductions"></label>
+            <input asp-for="Deductions" class="form-control" />
+            <span asp-validation-for="Deductions" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Taxable"></label>
+            <input asp-for="Taxable" class="form-control" />
+            <span asp-validation-for="Taxable" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="IncomeTax"></label>
+            <input asp-for="IncomeTax" class="form-control" />
+            <span asp-validation-for="IncomeTax" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="NetPay"></label>
+            <input asp-for="NetPay" class="form-control" />
+            <span asp-validation-for="NetPay" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn-primary btn" style="width:150px">Edit</button>
+        <a asp-controller="EmployeePayrollOperationController1" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to list
+        </a>
+    </div>
+</form>
+
+@*Client side validation
+    validations are in the script tag(refer shared->_ValidationScriptsPartial)
+*@
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+     }
+}
+
